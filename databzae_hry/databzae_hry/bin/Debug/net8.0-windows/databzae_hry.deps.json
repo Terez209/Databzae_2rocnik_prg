@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "databzae_hry/1.0.0": {
+        "runtime": {
+          "databzae_hry.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "databzae_hry/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
