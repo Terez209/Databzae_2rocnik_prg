@@ -15,7 +15,6 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <!-- Hlavní panel s filtrem a akcemi nad tabulkou -->
         <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" Margin="0,0,0,8">
             <TextBlock Text="Hledat (podle názvu):" VerticalAlignment="Center" Margin="0,0,8,0"/>
             <TextBox Width="250" Text="{Binding FilterText, UpdateSourceTrigger=PropertyChanged}" />
@@ -27,7 +26,6 @@
             </StackPanel>
         </StackPanel>
 
-        <!-- DataGrid se seznamem her -->
         <DataGrid Grid.Column="0" Grid.Row="1" ItemsSource="{Binding GamesView}" AutoGenerateColumns="False"
                   SelectionMode="Single" SelectedItem="{Binding SelectedHra, Mode=TwoWay}"
                   CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="False">
@@ -38,7 +36,6 @@
                 <DataGridTextColumn Header="Žánr" Binding="{Binding Zanr}" Width="140" />
                 <DataGridCheckBoxColumn Header="Staženo" Binding="{Binding Instalovana}" Width="90" />
 
-                <!-- Per-řádek akce -->
                 <DataGridTemplateColumn Header="Akce" Width="140">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
@@ -56,7 +53,6 @@
             </DataGrid.Columns>
         </DataGrid>
 
-        <!-- Pravý panel: formulář pro přidání / náhled / úpravu -->
         <Border Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" Margin="12,0,0,0" Padding="10" BorderBrush="#DDD" BorderThickness="1" CornerRadius="4">
             <StackPanel>
                 <TextBlock Text="Formulář hry" FontSize="16" FontWeight="Bold" Margin="0,0,0,8"/>
